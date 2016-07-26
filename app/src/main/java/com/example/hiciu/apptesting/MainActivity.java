@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
                 .subscribe(s -> showMessage(s));
 
         Observable myObs = Observable.just("one", "two", "three", "four", "five");
+        Observable myObs2 = Observable.just("one", "two", "three", "four", "five");
         Observable myObservable = Observable.create(new Observable.OnSubscribe<Integer>() {
             @Override
             public void call(Subscriber<? super Integer> observer) {
@@ -80,3 +81,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
+
